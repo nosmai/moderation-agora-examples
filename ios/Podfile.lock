@@ -1,0 +1,16 @@
+PODS:
+  - NosmaiModerationSDK (1.0.1)
+
+DEPENDENCIES:
+  - NosmaiModerationSDK (~> 1.0)
+
+SPEC REPOS:
+  trunk:
+    - NosmaiModerationSDK
+
+SPEC CHECKSUMS:
+  NosmaiModerationSDK: 69b525e970b7b678ed16776adbae8d1216697880
+
+PODFILE CHECKSUM: e66c78cfd0001e0e8279c72da74662e926ce4b86
+
+COCOAPODS: 1.16.2

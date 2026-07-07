@@ -1,0 +1,51 @@
+# macOS
+.DS_Store
+
+# ===== Android =====
+android/.gradle/
+android/build/
+android/app/build/
+android/.idea/
+android/.kotlin/
+android/captures/
+android/local.properties
+*.iml
+
+# ===== iOS =====
+ios/build/
+ios/DerivedData/
+**/xcuserdata/
+ios/Pods/
+
+# ===== Web =====
+web/node_modules/
+web/dist/
+web/.vite/
+web/public/models/
+
+# ===== Nosmai SDK (provided with your license — NOT committed) =====
+# Android native SDK
+*.aar
+**/libs/nosmai-detection.aar
+# iOS / model files
+*.enc
+*.bak
+**/nsm_*.enc
+**/nsm_*.bin
+**/nsm_*.onnx
+**/nsm_vocab.txt
+
+# ===== Flutter =====
+flutter_example/.dart_tool/
+flutter_example/build/
+flutter_example/.flutter-plugins
+flutter_example/.flutter-plugins-dependencies
+flutter_example/.packages
+flutter_example/android/.gradle/
+flutter_example/android/build/
+flutter_example/android/local.properties
+flutter_example/ios/Pods/
+flutter_example/ios/Flutter/Generated.xcconfig
+flutter_example/ios/Flutter/flutter_export_environment.sh
+flutter_example/macos/Pods/
+flutter_example/**/xcuserdata/

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nosmai Moderation + Agora - Web Example</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { font-family: system-ui, sans-serif; max-width: 760px; margin: 32px auto; padding: 0 16px; color: #1a1a1a; }
+      h1 { font-size: 22px; margin-bottom: 4px; }
+      h2 { font-size: 17px; margin-top: 28px; }
+      .sub { color: #666; margin-top: 0; }
+      .controls { display: flex; gap: 8px; margin: 18px 0 8px; flex-wrap: wrap; }
+      button.action { padding: 10px 18px; font-size: 15px; cursor: pointer; border: none; border-radius: 8px; background: #1a1a1a; color: #fff; }
+      button.action.stop { background: #777; }
+      button.action:disabled { opacity: 0.5; cursor: default; }
+      .status { color: #888; font-size: 14px; margin: 8px 0; min-height: 20px; }
+      #stage { position: relative; display: inline-block; margin-top: 8px; background: #000; border-radius: 8px; }
+      video, canvas { max-width: 100%; border-radius: 8px; display: block; }
+      #overlay { position: absolute; left: 0; top: 0; }
+      .verdict { font-size: 18px; font-weight: 700; margin-top: 12px; padding: 8px 12px; border-radius: 8px; display: inline-block; }
+      .verdict.safe { background: #e8f5e9; } .verdict.unsafe, .verdict.block { background: #ffebee; }
+      textarea { width: 100%; padding: 10px; font-size: 15px; border: 1px solid #ccc; border-radius: 8px; }
+      .card { margin-top: 12px; padding: 12px 14px; border-radius: 10px; display: none; }
+      .card.safe { background: #e8f5e9; } .card.block { background: #ffebee; }
+      .row { margin-top: 6px; color: #333; font-size: 14px; }
+      code { background: #f0f0f0; padding: 1px 5px; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <h1>Nosmai Moderation + Agora</h1>
+    <p class="sub">
+      Agora streams the broadcaster's camera. Every sampled frame is moderated
+      on-device by the Nosmai SDK (NSFW + objects). Nothing about the moderation
+      leaves the browser.
+    </p>
+
+    <div class="controls">
+      <button id="start" class="action">Start stream</button>
+      <button id="switch" class="action" disabled>Switch camera</button>
+      <button id="stop" class="action stop" disabled>Stop</button>
+    </div>
+    <div class="status" id="status">Initializing...</div>
+
+    <div id="stage">
+      <video id="video" playsinline muted></video>
+      <canvas id="overlay"></canvas>
+    </div>
+    <div class="verdict" id="verdict"></div>
+
+    <h2>Text moderation</h2>
+    <textarea id="text-in" rows="2" placeholder="Type a chat message to check"></textarea>
+    <div class="controls"><button id="text-btn" class="action">Moderate text</button></div>
+    <div class="status" id="text-status"></div>
+    <div class="card" id="text-card">
+      <div class="verdict" id="text-verdict"></div>
+      <div class="row" id="text-detail"></div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.vite/
+.env.local
+
+# Local lockfile carries a file: link to the SDK during local dev.
+# Commit a clean lock once @nosmai/moderation-web is published to npm.
+package-lock.json
+
+# Encrypted models (provided with your Nosmai license - NOT committed)
+public/models/
