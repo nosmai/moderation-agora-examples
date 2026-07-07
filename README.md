@@ -1,4 +1,4 @@
-# Nosmai Moderation + Agora — Example Apps
+# Nosmai Moderation + Agora Example Apps
 
 Example apps that combine **Nosmai on-device content moderation** with **Agora live streaming**. The broadcaster's camera is streamed with Agora, and every captured frame is moderated on-device by the Nosmai SDK in real time (NSFW, objects, and chat text), with no frame or message leaving the device.
 
@@ -10,8 +10,8 @@ web/       Web example (JavaScript, Vite)
 
 The Android and iOS examples have two screens:
 
-- **Live Camera Detection** — the plain on-device moderation demo (camera + verdicts + text moderation).
-- **Agora Live Stream + Moderation** — Agora captures and streams the video; each frame is tapped and passed to the Nosmai SDK, so the live broadcast is moderated in real time. Includes a camera switch and a text-moderation field.
+- **Live Camera Detection**: the plain on-device moderation demo (camera + verdicts + text moderation).
+- **Agora Live Stream + Moderation**: Agora captures and streams the video; each frame is tapped and passed to the Nosmai SDK, so the live broadcast is moderated in real time. Includes a camera switch and a text-moderation field.
 
 The web example is a single page: the Agora live stream with real-time moderation and a text-moderation field.
 
@@ -25,7 +25,7 @@ Agora captures the camera and streams it. On mobile a raw video-frame observer t
 - An **Agora** App ID and a temporary token (Agora Console), or a token server.
 - The **Nosmai Moderation SDK**:
   - Android: `nosmai-detection.aar` (from the Android SDK release) in `android/app/libs/`.
-  - iOS: the `NosmaiModerationSDK` CocoaPods pod — it ships the SDK framework and its encrypted models. Requires [CocoaPods](https://cocoapods.org/).
+  - iOS: the `NosmaiModerationSDK` CocoaPods pod. It ships the SDK framework and its encrypted models. Requires [CocoaPods](https://cocoapods.org/).
   - Web: the `@nosmai/moderation-web` npm package, plus the encrypted model files in `web/public/models/`. Requires [Node.js](https://nodejs.org/) 18+.
 
 ## Setup
