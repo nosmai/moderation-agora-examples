@@ -1,3 +1,5 @@
+![Nosmai Moderation + Agora](banner.png)
+
 # Nosmai Moderation + Agora Example Apps
 
 Example apps that combine **Nosmai on-device content moderation** with **Agora live streaming**. The broadcaster's camera is streamed with Agora, and every captured frame is moderated on-device by the Nosmai SDK in real time (NSFW, objects, and chat text), with no frame or message leaving the device.
